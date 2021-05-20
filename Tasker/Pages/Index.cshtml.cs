@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Tasker.Pages
 {
-    public class Index : PageModel
+    public class IndexModel : PageModel
     {
         public IEnumerable<Task> Tasks;
         private ApplicationDbContext _context;
-        public Index(ApplicationDbContext context)
+        public IndexModel(ApplicationDbContext context)
         {
             _context = context;
         }
