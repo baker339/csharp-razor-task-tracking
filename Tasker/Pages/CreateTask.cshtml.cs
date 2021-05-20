@@ -20,6 +20,8 @@ namespace Tasker.Pages
 
         public IActionResult OnPost()
         {
+            _context.Add(NewTask);
+            _context.SaveChanges();
             return RedirectToPage("Index");
         }
     }
