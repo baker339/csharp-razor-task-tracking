@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +8,7 @@ namespace Tasker.Pages
     public class Index : PageModel
     {
         public IEnumerable<Task> Tasks;
-        private DbContext _context;
+        private ApplicationDbContext _context;
         public Index(ApplicationDbContext context)
         {
             _context = context;
